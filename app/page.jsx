@@ -9,19 +9,19 @@ const featuredCapitals = [
   {
     name: "Paris",
     country: "France",
-    image: "/images/paris.jpg",
+    image: "/capitals/paris.jpg",
     description: "The City of Light awaits with iconic landmarks and culinary delights.",
   },
   {
     name: "Tokyo",
     country: "Japan",
-    image: "/images/tokyo.jpg",
+    image: "/capitals/tokyo.jpg",
     description: "Where ancient traditions meet cutting-edge innovation.",
   },
   {
     name: "London",
     country: "United Kingdom",
-    image: "/images/london.jpg",
+    image: "/capitals/london.jpg",
     description: "Royal heritage and modern culture in perfect harmony.",
   },
 ]
@@ -59,7 +59,7 @@ export default function HomePage() {
         <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src="/images/hero.jpg"
+              src="/hero.jpg"
               alt="World travel"
               fill
               className="object-cover"
@@ -80,13 +80,13 @@ export default function HomePage() {
               Embark on a journey through history, culture, and adventure. Discover what makes each capital city unique and plan your next unforgettable trip.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 hover:text-primary-foreground">
                 <Link href="/capitals">
                   Explore Capitals
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+              <Button asChild variant="outline" size="lg" className="border-primary-foreground/30 text-secondary-foreground hover:bg-primary-foreground/10 hover:text-secondary">
                 <Link href="/about">Learn More</Link>
               </Button>
             </div>
