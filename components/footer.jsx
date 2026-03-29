@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="bg-foreground text-primary-foreground">
       <div className="container mx-auto px-4 md:px-6 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 md:gap-12">
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
               <Globe className="h-6 w-6 text-accent" />
@@ -84,7 +84,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
+          {/* <div>
             <h3 className="font-semibold text-lg mb-4">Newsletter</h3>
             <p className="text-primary-foreground/70 text-sm mb-4">
               Subscribe to get travel tips and destination guides.
@@ -102,7 +102,7 @@ export function Footer() {
                 Subscribe
               </button>
             </form>
-          </div>
+          </div> */}
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
