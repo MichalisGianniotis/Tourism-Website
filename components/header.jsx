@@ -70,14 +70,6 @@ export function Header() {
                   {link.label}
                 </Link>
               ))}
-              {/* <div className="flex flex-col gap-2 pt-4 border-t border-border">
-                <Button variant="outline" size="sm" className="w-full">
-                  Sign In
-                </Button>
-                <Button size="sm" className="w-full">
-                  Get Started
-                </Button>
-              </div> */}
             </nav>
           </div>
         )}

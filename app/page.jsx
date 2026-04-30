@@ -1,37 +1,15 @@
 import Image from "next/image"
 import Link from "next/link"
-import features from "@/data/features"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, MapPin, Compass, Camera, Users } from "lucide-react"
+import capitals from "@/data/capitals"
+import features from "@/data/features"
 
-const featuredCapitals = [
-  {
-    name: "Paris",
-    country: "France",
-    image: "/capitals/paris.jpg",
-    description: "The City of Light awaits with iconic landmarks and culinary delights.",
-  },
-  {
-    name: "Tokyo",
-    country: "Japan",
-    image: "/capitals/tokyo.jpg",
-    description: "Where ancient traditions meet cutting-edge innovation.",
-  },
-  {
-    name: "London",
-    country: "United Kingdom",
-    image: "/capitals/london.jpg",
-    description: "Royal heritage and modern culture in perfect harmony.",
-  },
-]
+const featuredCapitals = capitals.filter((capital) => capital.featured)
 
 export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
-
       <main className="flex-1 pt-16 md:pt-20">
         {/* Hero Section */}
         <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
@@ -166,7 +144,7 @@ export default function HomePage() {
             <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8 leading-relaxed">
               Join thousands of travelers who have discovered their next adventure through CapitalExplorer.
             </p>
-            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:border-primary-foreground/30 hover:text-secondary">
               <Link href="/capitals">
                 Start Exploring
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -175,8 +153,6 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   )
 }

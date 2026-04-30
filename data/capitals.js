@@ -1,5 +1,6 @@
 const capitals = [
   {
+    slug: "paris",
     name: "Paris",
     country: "France",
     continent: "Europe",
@@ -7,8 +8,10 @@ const capitals = [
     population: "2.1 million",
     highlights: ["Eiffel Tower", "Louvre Museum", "Notre-Dame"],
     description: "The City of Light, renowned for art, fashion, gastronomy, and culture. Paris is a global center for art, fashion, and culture with iconic landmarks.",
+    featured: true,
   },
   {
+    slug: "tokyo",
     name: "Tokyo",
     country: "Japan",
     continent: "Asia",
@@ -16,8 +19,10 @@ const capitals = [
     population: "13.9 million",
     highlights: ["Shibuya Crossing", "Tokyo Tower", "Senso-ji Temple"],
     description: "A vibrant metropolis blending ultramodern and traditional, from neon-lit skyscrapers to historic temples and serene gardens.",
+    featured: true,
   },
   {
+    slug: "london",
     name: "London",
     country: "United Kingdom",
     continent: "Europe",
@@ -25,8 +30,10 @@ const capitals = [
     population: "8.9 million",
     highlights: ["Big Ben", "Tower of London", "Buckingham Palace"],
     description: "A 21st-century city with history stretching back to Roman times. Royal palaces, world-class museums, and diverse neighborhoods.",
+    featured: true,
   },
   {
+    slug: "rome",
     name: "Rome",
     country: "Italy",
     continent: "Europe",
@@ -34,8 +41,10 @@ const capitals = [
     population: "2.8 million",
     highlights: ["Colosseum", "Vatican City", "Trevi Fountain"],
     description: "The Eternal City, where ancient ruins and Renaissance masterpieces meet modern Italian culture and world-famous cuisine.",
+    featured: false,
   },
   {
+    slug: "berlin",
     name: "Berlin",
     country: "Germany",
     continent: "Europe",
@@ -45,6 +54,7 @@ const capitals = [
     description: "A city of culture, politics, and reinvention. Berlin is known for its art scene, nightlife, and modern architecture.",
   },
   {
+    slug: "madrid",
     name: "Madrid",
     country: "Spain",
     continent: "Europe",
@@ -52,8 +62,10 @@ const capitals = [
     population: "3.2 million",
     highlights: ["Royal Palace", "Prado Museum", "Puerta del Sol"],
     description: "Spain's vibrant capital, famous for its royal palace, world-class art museums, and legendary nightlife scene.",
+    featured: false,
   },
   {
+    slug: "washington-dc",
     name: "Washington D.C.",
     country: "United States",
     continent: "North America",
@@ -61,6 +73,7 @@ const capitals = [
     population: "0.7 million",
     highlights: ["White House", "Lincoln Memorial", "Smithsonian"],
     description: "The capital of the United States, home to iconic monuments, world-renowned museums, and the seat of American government.",
+    featured: false,
   },
 ]
 

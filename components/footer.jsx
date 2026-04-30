@@ -83,26 +83,6 @@ export function Footer() {
               </li>
             </ul>
           </div>
-
-          {/* <div>
-            <h3 className="font-semibold text-lg mb-4">Newsletter</h3>
-            <p className="text-primary-foreground/70 text-sm mb-4">
-              Subscribe to get travel tips and destination guides.
-            </p>
-            <form className="flex flex-col gap-3">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="px-4 py-2 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
-              />
-              <button
-                type="submit"
-                className="px-4 py-2 rounded-lg bg-accent text-accent-foreground font-medium text-sm hover:bg-accent/90 transition-colors"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div> */}
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
@@ -110,10 +90,10 @@ export function Footer() {
             © 2026 CapitalExplorer. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link href="#" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">
+            <Link href="/privacy" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">
+            <Link href="/terms" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">
               Terms of Service
             </Link>
           </div>

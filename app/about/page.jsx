@@ -44,8 +44,6 @@ const team = [
 export default function AboutPage() {
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
-
       <main className="flex-1 pt-16 md:pt-20">
         {/* Hero Section */}
         <section className="relative py-20 md:py-32 bg-secondary overflow-hidden">
@@ -215,8 +213,6 @@ export default function AboutPage() {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   )
 }
