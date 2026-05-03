@@ -24,6 +24,7 @@ function CapitalsContent() {
 
   const handleContinentChange = (continent) => {
     setSelectedContinent(continent)
+    setVisibleCount(3) // reset όταν αλλάζει το φίλτρο
     if (continent === "All") {
       router.push("/capitals")
     } else {
@@ -68,7 +69,7 @@ function CapitalsContent() {
               {continents.map((continent) => (
                 <button
                   key={continent}
-                  onClick={() => setSelectedContinent(continent)}
+                  onClick={() => handleContinentChange(continent)}
                   className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${
                     continent === selectedContinent
                       ? "bg-primary text-primary-foreground"
@@ -170,7 +171,7 @@ function CapitalsContent() {
                   We don&apos;t have any capitals listed for {selectedContinent} yet.
                 </p>
                 <button
-                  onClick={() => setSelectedContinent("All")}
+                  onClick={() => handleContinentChange("All")}
                   className="px-6 py-2 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
                 >
                   View All Capitals
