@@ -1,15 +1,35 @@
 'use client'
 
+import { useState, useEffect } from "react"
+import { useSearchParams, useRouter } from "next/navigation"
 import Image from "next/image"
 import { MapPin, Users, Building2, ArrowRight} from "lucide-react"
-import { useState } from "react"
 import Link from "next/link"
 import capitals from "@/data/capitals"
 
 const continents = ["All", "Europe", "Asia", "North America", "South America", "Africa", "Oceania"]
 
 export default function CapitalsPage() {
-  const [selectedContinent, setSelectedContinent] = useState("All")
+
+  const searchParams = useSearchParams()
+  const router = useRouter()
+  const continentParam = searchParams.get("continent")
+  const [selectedContinent, setSelectedContinent] = useState(continentParam || "All")
+
+  useEffect(() => {
+    if (continentParam && continents.includes(continentParam)) {
+      setSelectedContinent(continentParam)
+    }
+  }, [continentParam])
+
+  const handleContinentChange = (continent) => {
+    setSelectedContinent(continent)
+    if (continent === "All") {
+      router.push("/capitals")
+    } else {
+      router.push(`/capitals?continent=${encodeURIComponent(continent)}`)
+    }
+  }
 
   const filteredCapitals = selectedContinent === "All"
     ? capitals

@@ -200,14 +200,14 @@ export default function AboutPage() {
               Connect with travelers from around the world, share your experiences, and discover your next adventure.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 hover:text-secondary hover:border-secondary/30">
                 <Link href="/capitals">
                   Explore Capitals
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
-                <Link href="#">Contact Us</Link>
+              <Button asChild variant="outline" size="lg" className="text-accent-foreground hover:bg-primary-foreground/10 hover:border-secondary/30 hover:text-secondary">
+                <Link href="/contact">Contact Us</Link>
               </Button>
             </div>
           </div>

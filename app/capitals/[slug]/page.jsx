@@ -1,8 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 import { 
   MapPin, 
   Users, 
@@ -61,6 +59,7 @@ const CapitalPage = async ({ params }) => {
       <main className="flex-1 pt-16 md:pt-20">
         {/* Hero Section */}
         <section className="relative h-[50vh] md:h-[60vh] overflow-hidden">
+          
           <Image
             src={capital.image}
             alt={`${capital.name}, ${capital.country}`}
@@ -69,16 +68,17 @@ const CapitalPage = async ({ params }) => {
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
-          
+            <Link 
+                  href="/capitals" 
+                  className="inline-flex items-center gap-2 text-foreground m-4 transition-colors bg-background/80 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm"
+                >
+                  <ArrowLeft className="h-4 w-4" />
+                  Back to All Capitals
+            </Link>
           <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12">
+            
             <div className="container mx-auto">
-              <Link 
-                href="/capitals" 
-                className="inline-flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground mb-4 transition-colors bg-background/20 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm"
-              >
-                <ArrowLeft className="h-4 w-4" />
-                Back to All Capitals
-              </Link>
+              
               <div className="flex items-center gap-2 mb-2">
                 <span className="px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-medium">
                   {capital.continent}
@@ -150,7 +150,7 @@ const CapitalPage = async ({ params }) => {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground">Best Time</p>
-                  <p className="font-semibold text-foreground text-sm truncate">{capital.bestTimeToVisit.split(",")[0]}</p>
+                  <p className="font-semibold text-foreground text-sm">{capital.bestTimeToVisit.split(",")[0]}</p>
                 </div>
               </div>
             </div>

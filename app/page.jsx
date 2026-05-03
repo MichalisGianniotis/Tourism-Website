@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, MapPin, Compass, Camera, Users } from "lucide-react"
+import { ArrowRight, MapPin, Building2, Users } from "lucide-react"
 import capitals from "@/data/capitals"
 import features from "@/data/features"
 
@@ -42,7 +42,7 @@ export default function HomePage() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-primary-foreground/30 text-secondary-foreground hover:bg-primary-foreground/10 hover:text-secondary">
+              <Button asChild variant="outline" size="lg" className="border-secondary/30 text-secondary-foreground hover:bg-primary-foreground/10 hover:text-secondary">
                 <Link href="/about">Learn More</Link>
               </Button>
             </div>
@@ -105,30 +105,70 @@ export default function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {featuredCapitals.map((capital) => (
                 <Link
-                  key={capital.name}
-                  href="/capitals"
+                  key={capital.slug}
+                  href={`/capitals/${capital.slug}`}
                   className="group block"
                 >
-                  <div className="relative aspect-[4/3] rounded-xl overflow-hidden mb-4">
-                    <Image
-                      src={capital.image}
-                      alt={`${capital.name}, ${capital.country}`}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <p className="text-primary-foreground/80 text-sm">
-                        {capital.country}
-                      </p>
-                      <h3 className="text-xl font-bold text-primary-foreground">
-                        {capital.name}
-                      </h3>
+                  <article className="bg-card rounded-xl border border-border overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col">
+                    <div className="relative aspect-[16/10] overflow-hidden">
+                      <Image
+                        src={capital.image}
+                        alt={`${capital.name}, ${capital.country}`}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute top-4 left-4">
+                        <span className="px-3 py-1 rounded-full bg-background/90 text-foreground text-xs font-medium">
+                          {capital.continent}
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {capital.description}
-                  </p>
+
+                    <div className="p-6 flex flex-col flex-1">
+                      <div className="flex items-start justify-between mb-3">
+                        <div>
+                          <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                            {capital.name}
+                          </h3>
+                          <p className="text-muted-foreground text-sm flex items-center gap-1">
+                            <MapPin className="h-3 w-3" />
+                            {capital.country}
+                          </p>
+                        </div>
+                      </div>
+
+                      <p className="text-muted-foreground text-sm mb-4 leading-relaxed line-clamp-2">
+                        {capital.description}
+                      </p>
+
+                      <div className="flex items-center gap-4 text-xs text-muted-foreground mb-4">
+                        <span className="flex items-center gap-1">
+                          <Users className="h-3 w-3" />
+                          {capital.population}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Building2 className="h-3 w-3" />
+                          {capital.highlights.length} landmarks
+                        </span>
+                      </div>
+
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {capital.highlights.slice(0, 3).map((highlight) => (
+                          <span
+                            key={highlight}
+                            className="px-2 py-1 rounded-md bg-secondary text-secondary-foreground text-xs"
+                          >
+                            {highlight}
+                          </span>
+                        ))}
+                      </div>
+
+                      <div className="flex items-center gap-2 text-primary font-medium text-sm group-hover:gap-3 transition-all mt-auto">
+                        Explore More
+                        <ArrowRight className="h-4 w-4" />
+                      </div>
+                    </div>
+                  </article>
                 </Link>
               ))}
             </div>
@@ -144,7 +184,7 @@ export default function HomePage() {
             <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8 leading-relaxed">
               Join thousands of travelers who have discovered their next adventure through CapitalExplorer.
             </p>
-            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:border-primary-foreground/30 hover:text-secondary">
+            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:border-secondary/30 hover:text-secondary">
               <Link href="/capitals">
                 Start Exploring
                 <ArrowRight className="ml-2 h-5 w-5" />
