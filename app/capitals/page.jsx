@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, Suspense } from "react"
 import { useSearchParams, useRouter } from "next/navigation"
 import Image from "next/image"
 import { MapPin, Users, Building2, ArrowRight} from "lucide-react"
@@ -9,7 +9,7 @@ import capitals from "@/data/capitals"
 
 const continents = ["All", "Europe", "Asia", "North America", "South America", "Africa", "Oceania"]
 
-export default function CapitalsPage() {
+function CapitalsContent() {
 
   const searchParams = useSearchParams()
   const router = useRouter()
@@ -185,7 +185,6 @@ export default function CapitalsPage() {
                 Showing {Math.min(visibleCount, filteredCapitals.length)} of {filteredCapitals.length} capitals
               </p>
 
-              
                 <button
                   onClick={() => setVisibleCount((prev) => prev + 3)}
                   className="px-8 py-3 rounded-lg border border-border bg-card hover:bg-secondary text-foreground font-medium transition-colors"
@@ -193,12 +192,19 @@ export default function CapitalsPage() {
                   Load More Capitals
                 </button>
             </div>
-            ) 
-            }
+            )}
             
           </div>
         </section>
       </main>
     </div>
+  )
+}
+
+export default function CapitalsPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <CapitalsContent />
+    </Suspense>
   )
 }
