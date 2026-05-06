@@ -1,9 +1,6 @@
-import Image from "next/image"
 import Link from "next/link"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Download, ExternalLink, Mail, Calendar } from "lucide-react"
+import { ArrowRight, Mail, Calendar } from "lucide-react"
 
 const pressReleases = [
   {
@@ -151,74 +148,6 @@ export default function PressPage() {
           </div>
         </section>
 
-        {/* Brand Assets */}
-        {/* <section className="py-16 md:py-24">
-          <div className="container mx-auto px-4 md:px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <p className="text-primary font-medium mb-2 tracking-wider uppercase text-sm">
-                  Brand Assets
-                </p>
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                  Media Kit & Resources
-                </h2>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  Download our official logos, brand guidelines, product screenshots, and other media assets for use in your publications. Please follow our brand guidelines when using these materials.
-                </p>
-                <div className="space-y-4">
-                  <Button className="w-full sm:w-auto bg-primary text-primary-foreground hover:bg-primary/90">
-                    <Download className="mr-2 h-5 w-5" />
-                    Download Media Kit
-                  </Button>
-                  <p className="text-muted-foreground text-sm">
-                    Includes: Logos, screenshots, founder photos, fact sheet
-                  </p>
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-card p-6 rounded-xl border border-border text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-primary">CE</span>
-                  </div>
-                  <p className="text-sm font-medium text-foreground">Logo Pack</p>
-                  <p className="text-xs text-muted-foreground">SVG, PNG, EPS</p>
-                </div>
-                <div className="bg-card p-6 rounded-xl border border-border text-center">
-                  <div className="relative w-16 h-16 mx-auto mb-4 rounded-lg overflow-hidden">
-                    <Image
-                      src="/images/hero.jpg"
-                      alt="Screenshots"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <p className="text-sm font-medium text-foreground">Screenshots</p>
-                  <p className="text-xs text-muted-foreground">High-res images</p>
-                </div>
-                <div className="bg-card p-6 rounded-xl border border-border text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-lg bg-secondary flex items-center justify-center">
-                    <span className="text-sm font-medium text-foreground">Aa</span>
-                  </div>
-                  <p className="text-sm font-medium text-foreground">Brand Guide</p>
-                  <p className="text-xs text-muted-foreground">Colors & fonts</p>
-                </div>
-                <div className="bg-card p-6 rounded-xl border border-border text-center">
-                  <div className="relative w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden">
-                    <Image
-                      src="/images/paris.jpg"
-                      alt="Team photos"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <p className="text-sm font-medium text-foreground">Team Photos</p>
-                  <p className="text-xs text-muted-foreground">Founder & team</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> */}
-
         {/* Contact CTA */}
         <section className="py-16 md:py-24 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 md:px-6 text-center">
@@ -229,7 +158,7 @@ export default function PressPage() {
               For interviews, media coverage, or any press-related questions, our communications team is ready to help.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button asChild variant="outline" size="lg" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+              <Button asChild variant="outline" size="lg" className="text-foreground hover:bg-secondary/80">
                 <Link href="/contact">
                   General Contact
                   <ArrowRight className="ml-2 h-5 w-5" />

@@ -15,34 +15,6 @@ import {
 } from "lucide-react"
 import capitals from "@/lib/capitals"
 
-// export async function generateStaticParams() {
-//   return capitals.map((capital) => ({
-//     slug: capital.slug,
-//   }))
-// }
-// export function getAllCapitalSlugs(){
-//   return capitals.map((capital) => capital.slug)
-// }
-
-// export function getCapitalBySlug(slug) {
-//   return capitals.find((capital) => capital.slug === slug)
-// }
-
-// export async function generateMetadata({ params }) {
-//   const { slug } = await params
-//   const capital = getCapitalBySlug(slug)
-  
-//   if (!capital) {
-//     return {
-//       title: "Capital Not Found",
-//     }
-//   }
-
-//   return {
-//     title: `${capital.name}, ${capital.country} - CapitalExplorer`,
-//     description: capital.description,
-//   }
-// }
 
 const CapitalPage = async ({ params }) => {
   const { slug } = await params

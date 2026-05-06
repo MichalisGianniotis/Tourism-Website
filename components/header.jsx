@@ -3,7 +3,6 @@
 import Link from "next/link"
 import { useState } from "react"
 import { Menu, X, Globe } from "lucide-react"
-// import { Button } from "@/components/ui/button"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -36,13 +35,6 @@ export function Header() {
               </Link>
             ))}
           </nav>
-
-          {/* <div className="hidden md:flex items-center gap-4">
-            <Button variant="outline" size="sm">
-              Sign In
-            </Button>
-            <Button size="sm">Get Started</Button>
-          </div> */}
 
           <button
             className="md:hidden p-2"

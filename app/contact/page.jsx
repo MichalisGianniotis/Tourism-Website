@@ -1,5 +1,3 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react"
 
@@ -193,7 +191,7 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+                  <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 cursor-pointer">
                     Send Message
                     <Send className="ml-2 h-4 w-4" />
                   </Button>

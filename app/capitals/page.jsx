@@ -70,7 +70,7 @@ function CapitalsContent() {
                 <button
                   key={continent}
                   onClick={() => handleContinentChange(continent)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${
+                  className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors cursor-pointer ${
                     continent === selectedContinent
                       ? "bg-primary text-primary-foreground"
                       : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
@@ -172,7 +172,7 @@ function CapitalsContent() {
                 </p>
                 <button
                   onClick={() => handleContinentChange("All")}
-                  className="px-6 py-2 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
+                  className="px-6 py-2 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors cursor-pointer"
                 >
                   View All Capitals
                 </button>
@@ -188,7 +188,7 @@ function CapitalsContent() {
 
                 <button
                   onClick={() => setVisibleCount((prev) => prev + 3)}
-                  className="px-8 py-3 rounded-lg border border-border bg-card hover:bg-secondary text-foreground font-medium transition-colors"
+                  className="px-8 py-3 rounded-lg border border-border bg-card text-foreground font-medium transition-colors cursor-pointer hover:bg-secondary/80"
                 >
                   Load More Capitals
                 </button>

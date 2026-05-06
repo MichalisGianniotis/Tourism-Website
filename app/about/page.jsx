@@ -155,41 +155,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Team Section */}
-        {/* <section className="py-16 md:py-24">
-          <div className="container mx-auto px-4 md:px-6">
-            <div className="text-center mb-12 md:mb-16">
-              <p className="text-primary font-medium mb-2 tracking-wider uppercase text-sm">
-                Our Team
-              </p>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                The People Behind CapitalExplorer
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              {team.map((member) => (
-                <div key={member.name} className="text-center">
-                  <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 border-4 border-border">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <h3 className="text-lg font-semibold text-foreground">
-                    {member.name}
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    {member.role}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section> */}
-
         {/* CTA Section */}
         <section className="py-16 md:py-24 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 md:px-6 text-center">
@@ -200,13 +165,13 @@ export default function AboutPage() {
               Connect with travelers from around the world, share your experiences, and discover your next adventure.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 hover:text-secondary hover:border-secondary/30">
+              <Button asChild size="lg" className="bg-accent text-foreground hover:border-secondary/30 hover:text-primary-foreground">
                 <Link href="/capitals">
                   Explore Capitals
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="text-accent-foreground hover:bg-primary-foreground/10 hover:border-secondary/30 hover:text-secondary">
+              <Button asChild variant="outline" size="lg" className="text-foreground hover:bg-secondary/80">
                 <Link href="/contact">Contact Us</Link>
               </Button>
             </div>

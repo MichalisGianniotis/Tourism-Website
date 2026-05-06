@@ -36,13 +36,13 @@ export default function HomePage() {
               Embark on a journey through history, culture, and adventure. Discover what makes each capital city unique and plan your next unforgettable trip.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 hover:text-primary-foreground">
+              <Button asChild size="lg" className="bg-accent text-foreground hover:text-primary-foreground">
                 <Link href="/capitals">
                   Explore Capitals
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-secondary/30 text-secondary-foreground hover:bg-primary-foreground/10 hover:text-secondary">
+              <Button asChild variant="outline" size="lg" className="border-secondary/30 text-secondary-foreground hover:bg-secondary/80">
                 <Link href="/about">Learn More</Link>
               </Button>
             </div>
@@ -184,7 +184,7 @@ export default function HomePage() {
             <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8 leading-relaxed">
               Join thousands of travelers who have discovered their next adventure through CapitalExplorer.
             </p>
-            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:border-secondary/30 hover:text-secondary">
+            <Button asChild size="lg" className="bg-accent text-foreground hover:border-secondary/30 hover:text-primary-foreground">
               <Link href="/capitals">
                 Start Exploring
                 <ArrowRight className="ml-2 h-5 w-5" />
